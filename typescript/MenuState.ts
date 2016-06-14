@@ -13,6 +13,7 @@ class MenuState extends Phaser.State {
 
     storyText: Phaser.Text;
     music: Phaser.Sound;
+    title: Phaser.Image;
     alphaTween: Phaser.Tween;
     instructionsText: Array<Phaser.Text>;
     timedEvent: any;
@@ -56,7 +57,7 @@ class MenuState extends Phaser.State {
         this.music.allowMultiple = false;
         this.music.loopFull();
         if (MenuState.storyViewed) {
-
+            this.loadTitlePage();
         }
         else {
             this.storyText = this.game.add.text(0, 0, this.story[0], { font: "bold 32px Arial", fill: "#ffffff", boundsAlignH: "center", boundsAlignV: "middle" , wordWrap: true, wordWrapWidth:600 });
@@ -82,15 +83,7 @@ class MenuState extends Phaser.State {
         }
         else {
             if (this.mouseDownThisFrame) {
-                MenuState.storyViewed = true;
-
-                this.game.time.events.stop(this.timedEvent);
-                this.storyText.destroy();
-
-                this.instructionsText = new Array<Phaser.Text>(this.instructions.length);
-                for (var i = 0; i < this.instructions.length; i++) {
-                    this.instructionsText[i] = this.game.add.text(60, 100 + 50 * i, this.instructions[i], { font: "bold 32px Arial", fill: "#ffffff", boundsAlignH: "Left", boundsAlignV: "middle" });
-                }
+                this.loadTitlePage();
             }
         }
         this.afterUpdate();
@@ -103,15 +96,7 @@ class MenuState extends Phaser.State {
     tickStory = () => {
         this.storyPage += 1;
         if (this.storyPage >= this.story.length) {
-            MenuState.storyViewed = true;
-
-            this.game.time.events.stop(this.timedEvent);
-            this.storyText.destroy();
-
-            this.instructionsText = new Array<Phaser.Text>(this.instructions.length);
-            for (var i = 0; i < this.instructions.length; i++) {
-                this.instructionsText[i] = this.game.add.text(60, 100 + 50 * i, this.instructions[i], { font: "bold 32px Arial", fill: "#ffffff", boundsAlignH: "Left", boundsAlignV: "middle" });
-            }
+            this.loadTitlePage();
         }
         else {
             this.storyText.text = this.story[this.storyPage];
@@ -119,6 +104,21 @@ class MenuState extends Phaser.State {
             this.storyText.wordWrapWidth = 600;
             this.storyText.wordWrap = true;
 
+        }
+    }
+
+    loadTitlePage() {
+        MenuState.storyViewed = true;
+
+        if (this.storyText != null) {
+            this.game.time.events.stop(this.timedEvent);
+            this.storyText.destroy();
+        }
+
+        this.game.add.image(200, 25, "title");
+        this.instructionsText = new Array<Phaser.Text>(this.instructions.length);
+        for (var i = 0; i < this.instructions.length; i++) {
+            this.instructionsText[i] = this.game.add.text(60, 100 + 50 * i, this.instructions[i], { font: "bold 32px Arial", fill: "#ffffff", boundsAlignH: "Left", boundsAlignV: "middle" });
         }
     }
 

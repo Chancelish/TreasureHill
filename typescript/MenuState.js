@@ -15,13 +15,7 @@ var MenuState = (function (_super) {
         this.tickStory = function () {
             _this.storyPage += 1;
             if (_this.storyPage >= _this.story.length) {
-                MenuState.storyViewed = true;
-                _this.game.time.events.stop(_this.timedEvent);
-                _this.storyText.destroy();
-                _this.instructionsText = new Array(_this.instructions.length);
-                for (var i = 0; i < _this.instructions.length; i++) {
-                    _this.instructionsText[i] = _this.game.add.text(60, 100 + 50 * i, _this.instructions[i], { font: "bold 32px Arial", fill: "#ffffff", boundsAlignH: "Left", boundsAlignV: "middle" });
-                }
+                _this.loadTitlePage();
             }
             else {
                 _this.storyText.text = _this.story[_this.storyPage];
@@ -65,6 +59,7 @@ var MenuState = (function (_super) {
         this.music.allowMultiple = false;
         this.music.loopFull();
         if (MenuState.storyViewed) {
+            this.loadTitlePage();
         }
         else {
             this.storyText = this.game.add.text(0, 0, this.story[0], { font: "bold 32px Arial", fill: "#ffffff", boundsAlignH: "center", boundsAlignV: "middle", wordWrap: true, wordWrapWidth: 600 });
@@ -87,19 +82,25 @@ var MenuState = (function (_super) {
         }
         else {
             if (this.mouseDownThisFrame) {
-                MenuState.storyViewed = true;
-                this.game.time.events.stop(this.timedEvent);
-                this.storyText.destroy();
-                this.instructionsText = new Array(this.instructions.length);
-                for (var i = 0; i < this.instructions.length; i++) {
-                    this.instructionsText[i] = this.game.add.text(60, 100 + 50 * i, this.instructions[i], { font: "bold 32px Arial", fill: "#ffffff", boundsAlignH: "Left", boundsAlignV: "middle" });
-                }
+                this.loadTitlePage();
             }
         }
         this.afterUpdate();
     };
     MenuState.prototype.afterUpdate = function () {
         this.mouseDownLastFrame = this.game.input.activePointer.leftButton.isDown;
+    };
+    MenuState.prototype.loadTitlePage = function () {
+        MenuState.storyViewed = true;
+        if (this.storyText != null) {
+            this.game.time.events.stop(this.timedEvent);
+            this.storyText.destroy();
+        }
+        this.game.add.image(200, 25, "title");
+        this.instructionsText = new Array(this.instructions.length);
+        for (var i = 0; i < this.instructions.length; i++) {
+            this.instructionsText[i] = this.game.add.text(60, 100 + 50 * i, this.instructions[i], { font: "bold 32px Arial", fill: "#ffffff", boundsAlignH: "Left", boundsAlignV: "middle" });
+        }
     };
     MenuState.storyViewed = false;
     return MenuState;

@@ -1,4 +1,5 @@
 /// <reference path="typescript/MenuState.ts" />
+/// <reference path="typescript/PlayState.ts" />
 /// <reference path="phaser.d.ts" />
 var GiTDSummerGame = (function () {
     function GiTDSummerGame() {
@@ -8,7 +9,8 @@ var GiTDSummerGame = (function () {
         //tiles and blocks
         this.game.load.image("tiles", "./gfx/32x32topdown.png");
         this.game.load.spritesheet("chest", "./gfx/chest.png", 32, 32);
-        this.game.load.image("shrub", "./gfx/shrub.png");
+        this.game.load.spritesheet("shrub", "./gfx/shrub.png", 32, 32);
+        this.game.load.spritesheet("rock", "./gfx/rock.png", 32, 32);
         //entity sprites
         this.game.load.image("arrow", "./gfx/arrow.png");
         this.game.load.spritesheet("bow", "./gfx/bow.png", 24, 31);
@@ -39,6 +41,7 @@ var GiTDSummerGame = (function () {
     GiTDSummerGame.prototype.create = function () {
         this.game.scale.scaleMode = Phaser.ScaleManager.NO_SCALE;
         this.game.state.add("Menu", MenuState);
+        this.game.state.add("Play", PlayState);
         this.game.state.start("Menu");
     };
     return GiTDSummerGame;

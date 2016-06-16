@@ -1,0 +1,198 @@
+<level width="640" height="640">
+  <background tileset="background" exportMode="CSV">0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</background>
+  <entities>
+    <rock id="0" x="0" y="0" probability="1" />
+    <rock id="1" x="0" y="32" probability="1" />
+    <rock id="2" x="0" y="64" probability="1" />
+    <rock id="3" x="0" y="96" probability="1" />
+    <rock id="4" x="0" y="128" probability="1" />
+    <rock id="5" x="0" y="160" probability="1" />
+    <rock id="6" x="0" y="192" probability="1" />
+    <rock id="7" x="0" y="224" probability="1" />
+    <rock id="8" x="0" y="256" probability="1" />
+    <rock id="9" x="0" y="288" probability="1" />
+    <rock id="10" x="0" y="320" probability="1" />
+    <rock id="11" x="0" y="352" probability="1" />
+    <rock id="12" x="0" y="384" probability="1" />
+    <rock id="13" x="0" y="416" probability="1" />
+    <rock id="14" x="0" y="448" probability="1" />
+    <rock id="15" x="0" y="480" probability="1" />
+    <rock id="16" x="0" y="512" probability="1" />
+    <rock id="17" x="0" y="544" probability="1" />
+    <rock id="18" x="0" y="576" probability="1" />
+    <rock id="19" x="0" y="608" probability="1" />
+    <rock id="20" x="32" y="608" probability="1" />
+    <rock id="21" x="64" y="608" probability="1" />
+    <rock id="22" x="96" y="608" probability="1" />
+    <rock id="23" x="128" y="608" probability="1" />
+    <rock id="24" x="160" y="608" probability="1" />
+    <rock id="25" x="192" y="608" probability="1" />
+    <rock id="26" x="224" y="608" probability="1" />
+    <rock id="27" x="32" y="0" probability="1" />
+    <rock id="28" x="64" y="0" probability="1" />
+    <rock id="29" x="96" y="0" probability="1" />
+    <rock id="30" x="608" y="608" probability="1" />
+    <rock id="31" x="576" y="608" probability="1" />
+    <rock id="32" x="544" y="608" probability="1" />
+    <rock id="33" x="512" y="608" probability="1" />
+    <rock id="34" x="480" y="608" probability="1" />
+    <rock id="35" x="448" y="608" probability="1" />
+    <rock id="36" x="416" y="608" probability="1" />
+    <rock id="37" x="384" y="608" probability="1" />
+    <rock id="38" x="352" y="608" probability="1" />
+    <rock id="39" x="256" y="608" probability="1" />
+    <rock id="40" x="128" y="0" probability="1" />
+    <rock id="41" x="160" y="0" probability="1" />
+    <bush id="42" x="320" y="608" probability="1" />
+    <bush id="43" x="288" y="608" probability="1" />
+    <rock id="44" x="192" y="0" probability="1" />
+    <rock id="45" x="224" y="0" probability="1" />
+    <rock id="46" x="256" y="0" probability="1" />
+    <rock id="49" x="352" y="0" probability="1" />
+    <rock id="50" x="384" y="0" probability="1" />
+    <rock id="51" x="416" y="0" probability="1" />
+    <rock id="52" x="448" y="0" probability="1" />
+    <rock id="53" x="480" y="0" probability="1" />
+    <rock id="54" x="512" y="0" probability="1" />
+    <rock id="55" x="544" y="0" probability="1" />
+    <rock id="56" x="576" y="0" probability="1" />
+    <rock id="57" x="608" y="0" probability="1" />
+    <rock id="58" x="608" y="32" probability="1" />
+    <rock id="47" x="608" y="64" probability="1" />
+    <rock id="48" x="608" y="96" probability="1" />
+    <rock id="59" x="608" y="128" probability="1" />
+    <rock id="60" x="608" y="160" probability="1" />
+    <rock id="61" x="608" y="192" probability="1" />
+    <rock id="62" x="608" y="224" probability="1" />
+    <rock id="63" x="608" y="256" probability="1" />
+    <rock id="64" x="608" y="288" probability="1" />
+    <rock id="65" x="608" y="320" probability="1" />
+    <rock id="66" x="608" y="352" probability="1" />
+    <rock id="67" x="608" y="384" probability="1" />
+    <rock id="68" x="608" y="416" probability="1" />
+    <rock id="69" x="608" y="448" probability="1" />
+    <rock id="70" x="608" y="480" probability="1" />
+    <rock id="71" x="608" y="512" probability="1" />
+    <rock id="72" x="608" y="544" probability="1" />
+    <rock id="73" x="608" y="576" probability="1" />
+    <chest id="74" x="64" y="544" probability="0.1" />
+    <chest id="75" x="64" y="64" probability="0.1" />
+    <chest id="76" x="544" y="64" probability="0.1" />
+    <chest id="77" x="544" y="544" probability="0.1" />
+    <rock id="78" x="96" y="512" probability="0.5" />
+    <rock id="79" x="96" y="480" probability="0.5" />
+    <rock id="80" x="128" y="480" probability="0.5" />
+    <rock id="81" x="128" y="512" probability="0.5" />
+    <rock id="82" x="96" y="96" probability="0.5" />
+    <rock id="83" x="96" y="128" probability="0.5" />
+    <rock id="84" x="128" y="128" probability="0.5" />
+    <rock id="85" x="128" y="96" probability="0.5" />
+    <rock id="86" x="512" y="96" probability="0.5" />
+    <rock id="87" x="480" y="96" probability="0.5" />
+    <rock id="88" x="480" y="128" probability="0.5" />
+    <rock id="89" x="512" y="128" probability="0.5" />
+    <rock id="90" x="512" y="512" probability="0.5" />
+    <rock id="91" x="512" y="480" probability="0.5" />
+    <rock id="92" x="480" y="480" probability="0.5" />
+    <rock id="93" x="480" y="512" probability="0.5" />
+    <rock id="94" x="576" y="320" probability="0.5" />
+    <rock id="95" x="544" y="320" probability="0.5" />
+    <rock id="96" x="512" y="320" probability="0.5" />
+    <rock id="97" x="480" y="320" probability="0.5" />
+    <rock id="98" x="448" y="320" probability="0.5" />
+    <rock id="99" x="416" y="320" probability="0.5" />
+    <rock id="100" x="32" y="320" probability="0.5" />
+    <rock id="101" x="64" y="320" probability="0.5" />
+    <rock id="102" x="96" y="320" probability="0.5" />
+    <rock id="103" x="128" y="320" probability="0.5" />
+    <rock id="104" x="160" y="320" probability="0.5" />
+    <rock id="105" x="192" y="320" probability="0.5" />
+    <rock id="106" x="224" y="320" probability="0.5" />
+    <rock id="107" x="384" y="320" probability="0.5" />
+    <rock id="108" x="416" y="256" probability="0.5" />
+    <rock id="109" x="448" y="256" probability="0.5" />
+    <rock id="110" x="448" y="224" probability="0.5" />
+    <rock id="111" x="416" y="224" probability="0.5" />
+    <rock id="112" x="320" y="128" probability="0.5" />
+    <rock id="113" x="352" y="160" probability="0.5" />
+    <rock id="114" x="352" y="128" probability="0.5" />
+    <rock id="115" x="320" y="160" probability="0.5" />
+    <bush id="116" x="448" y="96" probability="0.5" />
+    <bush id="117" x="448" y="128" probability="0.5" />
+    <bush id="118" x="416" y="128" probability="0.5" />
+    <bush id="119" x="384" y="128" probability="0.5" />
+    <bush id="120" x="384" y="160" probability="0.5" />
+    <bush id="121" x="384" y="192" probability="0.5" />
+    <bush id="122" x="384" y="224" probability="0.5" />
+    <bush id="123" x="416" y="160" probability="0.5" />
+    <bush id="124" x="416" y="192" probability="0.5" />
+    <bush id="125" x="448" y="160" probability="0.5" />
+    <bush id="126" x="448" y="192" probability="0.5" />
+    <bush id="127" x="480" y="160" probability="0.5" />
+    <bush id="128" x="480" y="192" probability="0.5" />
+    <bush id="129" x="480" y="224" probability="0.5" />
+    <bush id="130" x="288" y="320" probability="0.5" />
+    <bush id="131" x="288" y="288" probability="0.5" />
+    <bush id="132" x="288" y="256" probability="0.5" />
+    <bush id="133" x="288" y="224" probability="0.5" />
+    <bush id="134" x="256" y="224" probability="0.5" />
+    <bush id="135" x="224" y="224" probability="0.5" />
+    <bush id="136" x="192" y="224" probability="0.5" />
+    <bush id="137" x="160" y="224" probability="0.5" />
+    <bush id="138" x="128" y="224" probability="0.5" />
+    <bush id="139" x="96" y="224" probability="0.5" />
+    <bush id="140" x="192" y="384" probability="0.5" />
+    <bush id="141" x="224" y="384" probability="0.5" />
+    <bush id="142" x="192" y="416" probability="0.5" />
+    <bush id="143" x="192" y="448" probability="0.5" />
+    <bush id="144" x="224" y="448" probability="0.5" />
+    <bush id="145" x="224" y="416" probability="0.5" />
+    <bush id="146" x="320" y="384" probability="0.5" />
+    <bush id="147" x="288" y="384" probability="0.5" />
+    <bush id="148" x="288" y="416" probability="0.5" />
+    <bush id="149" x="320" y="416" probability="0.5" />
+    <bush id="150" x="512" y="384" probability="0.5" />
+    <bush id="151" x="448" y="384" probability="0.5" />
+    <bush id="152" x="448" y="416" probability="0.5" />
+    <bush id="153" x="480" y="384" probability="0.5" />
+    <bush id="154" x="320" y="480" probability="0.5" />
+    <bush id="155" x="384" y="480" probability="0.5" />
+    <rock id="156" x="352" y="480" probability="0.5" />
+    <rock id="157" x="352" y="448" probability="0.5" />
+    <rock id="158" x="352" y="416" probability="0.5" />
+    <bush id="159" x="256" y="544" probability="0.5" />
+    <bush id="160" x="256" y="576" probability="0.5" />
+    <bush id="161" x="384" y="544" probability="0.5" />
+    <bush id="162" x="352" y="544" probability="0.5" />
+    <bush id="163" x="352" y="576" probability="0.5" />
+    <rock id="164" x="96" y="352" probability="0.5" />
+    <rock id="166" x="96" y="416" probability="0.5" />
+    <bush id="165" x="96" y="384" probability="0.5" />
+    <bush id="167" x="224" y="32" probability="0.5" />
+    <bush id="168" x="224" y="64" probability="0.5" />
+    <bush id="169" x="256" y="64" probability="0.5" />
+    <bush id="170" x="192" y="160" probability="0.5" />
+    <bush id="171" x="160" y="128" probability="0.5" />
+    <rock id="172" x="96" y="288" probability="0.5" />
+    <rock id="173" x="96" y="256" probability="0.5" />
+  </entities>
+</level>

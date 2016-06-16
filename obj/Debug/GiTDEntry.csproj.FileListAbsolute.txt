@@ -1,0 +1,6 @@
+C:\Users\Chance\documents\visual studio 2015\Projects\GiTDEntry\GiTDEntry\bin\GiTDEntry.dll.config
+C:\Users\Chance\documents\visual studio 2015\Projects\GiTDEntry\GiTDEntry\bin\GiTDEntry.dll
+C:\Users\Chance\documents\visual studio 2015\Projects\GiTDEntry\GiTDEntry\bin\GiTDEntry.pdb
+C:\Users\Chance\documents\visual studio 2015\Projects\GiTDEntry\GiTDEntry\obj\Debug\GiTDEntry.csprojResolveAssemblyReference.cache
+C:\Users\Chance\documents\visual studio 2015\Projects\GiTDEntry\GiTDEntry\obj\Debug\GiTDEntry.dll
+C:\Users\Chance\documents\visual studio 2015\Projects\GiTDEntry\GiTDEntry\obj\Debug\GiTDEntry.pdb

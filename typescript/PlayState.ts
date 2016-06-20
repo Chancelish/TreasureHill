@@ -51,7 +51,7 @@ class PlayState extends Phaser.State {
 
         if (PlayState.music == null) {
             
-            PlayState.music = this.game.add.sound("battle", 0.7, true);
+            PlayState.music = this.game.add.sound("battle", 0.5, true);
             PlayState.music.allowMultiple = false;
             PlayState.music.play();
         }
@@ -343,6 +343,7 @@ class PlayState extends Phaser.State {
 
     playerVsTheTreasure(player: Phaser.Sprite, goal: Phaser.Sprite) {
         GameOverState.won = true;
+        PlayState.music.volume = 0;
         PlayState.music.stop();
         PlayState.music.loop = false;
         goal.game.sound.stopAll();

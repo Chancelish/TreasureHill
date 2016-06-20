@@ -22,7 +22,7 @@ var PlayState = (function (_super) {
             this.game.sound.stopAll();
         }
         if (PlayState.music == null) {
-            PlayState.music = this.game.add.sound("battle", 0.7, true);
+            PlayState.music = this.game.add.sound("battle", 0.5, true);
             PlayState.music.allowMultiple = false;
             PlayState.music.play();
         }
@@ -267,6 +267,7 @@ var PlayState = (function (_super) {
     };
     PlayState.prototype.playerVsTheTreasure = function (player, goal) {
         GameOverState.won = true;
+        PlayState.music.volume = 0;
         PlayState.music.stop();
         PlayState.music.loop = false;
         goal.game.sound.stopAll();

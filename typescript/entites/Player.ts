@@ -232,6 +232,7 @@ class Player {
             this.invFrames = 750;
         }
         if (Player.health <= 0) {
+            PlayState.music.volume = 0;
             PlayState.music.stop();
             PlayState.music.loop = false;
             this.game.sound.stopAll();

@@ -55,9 +55,9 @@ var MenuState = (function (_super) {
         this.instructions.push("Click anywhere to start");
     };
     MenuState.prototype.create = function () {
-        this.music = this.game.add.audio("old_west", 1, true);
-        this.music.allowMultiple = false;
-        this.music.loopFull();
+        MenuState.music = this.game.add.audio("old_west", 1, true);
+        MenuState.music.allowMultiple = false;
+        MenuState.music.play();
         if (MenuState.storyViewed) {
             this.loadTitlePage();
         }
@@ -78,13 +78,19 @@ var MenuState = (function (_super) {
         this.beforeUpdate();
         if (MenuState.storyViewed) {
             if (this.mouseDownThisFrame && !this.mouseDownLastFrame) {
-                this.music.stop();
+                MenuState.music.stop();
+                this.game.sound.stopAll();
+                MenuState.music.volume = 0;
                 this.game.world.removeAll();
                 this.game.state.start("Play", true);
+                Player.weaponAmmo = [1, 12, 0, 0, 0, 0];
+                Player.selectedWeapon = 0;
+                Player.health = 5;
+                PlayState.roomsCleared = 0;
             }
         }
         else {
-            if (this.mouseDownThisFrame) {
+            if (this.mouseDownThisFrame && !this.mouseDownLastFrame) {
                 this.loadTitlePage();
             }
         }
@@ -95,6 +101,7 @@ var MenuState = (function (_super) {
     };
     MenuState.prototype.loadTitlePage = function () {
         MenuState.storyViewed = true;
+        MenuState.music.loop = false;
         if (this.storyText != null) {
             this.game.time.events.stop(this.timedEvent);
             this.storyText.destroy();

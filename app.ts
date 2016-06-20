@@ -45,15 +45,18 @@ class GiTDSummerGame {
         this.game.load.image("ghastly_knife", "./gfx/ghastly_knife.png");
         this.game.load.image("moon_hatchet", "./gfx/moon_touched_hatchet.png");
         this.game.load.image("phantom_winchester", "./gfx/phantom_winchester.png");
+        this.game.load.spritesheet("stock_arrows", "./gfx/stock_arrows_24x24x4.png", 24, 24);
         this.game.load.image("title", "./gfx/title.png");
 
         this.game.load.audio("old_west", "./snd/oldwest.mp3");
+        this.game.load.audio("battle", "./snd/battle.mp3");
     }
 
     create() {
         this.game.scale.scaleMode = Phaser.ScaleManager.NO_SCALE;
         this.game.state.add("Menu", MenuState);
         this.game.state.add("Play", PlayState);
+        this.game.state.add("GameOver", GameOverState);
         this.game.state.start("Menu");
     }
 

@@ -12,7 +12,7 @@ class MenuState extends Phaser.State {
     static storyViewed: boolean = false;
 
     storyText: Phaser.Text;
-    music: Phaser.Sound;
+    static music: Phaser.Sound;
     title: Phaser.Image;
     alphaTween: Phaser.Tween;
     instructionsText: Array<Phaser.Text>;
@@ -53,9 +53,9 @@ class MenuState extends Phaser.State {
     }
 
     create() {
-        this.music = this.game.add.audio("old_west", 1, true);
-        this.music.allowMultiple = false;
-        this.music.loopFull();
+        MenuState.music = this.game.add.audio("old_west", 1, true);
+        MenuState.music.allowMultiple = false;
+        MenuState.music.play();
         if (MenuState.storyViewed) {
             this.loadTitlePage();
         }
@@ -78,13 +78,19 @@ class MenuState extends Phaser.State {
         this.beforeUpdate();
         if (MenuState.storyViewed) {
             if (this.mouseDownThisFrame && !this.mouseDownLastFrame) {
-                this.music.stop();
+                MenuState.music.stop();
+                this.game.sound.stopAll();
+                MenuState.music.volume = 0;
                 this.game.world.removeAll();
                 this.game.state.start("Play", true);
+                Player.weaponAmmo = [1, 12, 0, 0, 0, 0];
+                Player.selectedWeapon = 0;
+                Player.health = 5;
+                PlayState.roomsCleared = 0;
             }
         }
         else {
-            if (this.mouseDownThisFrame) {
+            if (this.mouseDownThisFrame && !this.mouseDownLastFrame) {
                 this.loadTitlePage();
             }
         }
@@ -111,7 +117,7 @@ class MenuState extends Phaser.State {
 
     loadTitlePage() {
         MenuState.storyViewed = true;
-
+        MenuState.music.loop = false;
         if (this.storyText != null) {
             this.game.time.events.stop(this.timedEvent);
             this.storyText.destroy();
